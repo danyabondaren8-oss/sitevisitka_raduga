@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Радуга — ремонт балконов, окон и потолков</title>
+    <link rel="icon" href="img/fav_icon.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header class="clearfix">
+            <a id="logo" href="index.html">
+                <img src="img/RADUGA_FINAL.png" alt="Радуга">
+            </a>
+            <nav id="mainnav">
+                <ul>
+                    <li><a href="uslugi.html">Услуги</a></li>
+                    <li><a href="about_us.html">О нас</a></li>
+                    <li><a href="clients.html">Клиенты</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="feedback">
+                <form id="contact-form" action="" method="post">
+                    <div class="form__item">
+                        <label for="topic">Тема</label><br>
+                        <select name="topic" id="topic" required>
+                            <option value="1">Заказать замер</option>
+                            <option value="2">Отделка балкона / лоджии</option>
+                            <option value="3">Остекление и отделка окон</option>
+                            <option value="4">Монтаж потолка</option>
+                            <option value="5">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form__item">
+                        <label for="name">Имя</label><br>
+                        <input name="name" id="name" type="text" placeholder="Как к вам обращаться" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="email">E-mail</label><br>
+                        <input name="email" id="email" type="email" placeholder="example@mail.ru" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="phone">Телефон</label><br>
+                        <input name="phone" id="phone" type="tel" placeholder="+7(900)000-00-00" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="date">Желаемая дата замера</label><br>
+                        <input name="date" id="date" type="date" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="message">Текст сообщения</label><br>
+                        <textarea name="message" id="message" placeholder="Опишите объект: площадь, тип балкона, что нужно сделать" required></textarea>
+                    </div>
+                    <div class="form__item">
+                        <input type="submit" value="Отправить">
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p class="footer__block"><a href="form.html">Написать нам</a> &#9650;</p>
+        <p class="footer__block">&copy; Радуга</p>
+        <div class="footer__icons">
+            <a href="https://mail.ru" target="_blank"><img class="footer__img" src="img/mailru.png" alt="Mail.ru"></a>
+            <a href="https://vk.com" target="_blank"><img class="footer__img" src="img/vk.png" alt="ВКонтакте"></a>
+            <a href="https://ok.ru" target="_blank"><img class="footer__img" src="img/ok.png" alt="Одноклассники"></a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Спасибо! Ваша заявка успешно отправлена. Мы свяжемся с вами в ближайшее время.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
